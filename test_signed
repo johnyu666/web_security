@@ -1,0 +1,18 @@
+var signature = require('cookie-parser/node_modules/cookie-signature');
+
+console.log(signature.sign("abc","John"));
+
+//curl http://localhost:9000/reg -H "Cookie: name = s%3Ajohn.DLIiJgv0llC1zsGyuFFnvwAQjgHWvhRglOBNvcJphII"
+
+//curl http://localhost:9000/reg -H "Cookie: name = s%3AwlSf454h47EBqthz9Kt8edhOTs3m6CvZ.vswaiAtcGUxT%2FDdSZt59VKseAP0zPQdlRI4swIJZObg"
+
+//curl http://localhost:9000/reg -H "Cookie: connect.sid = s%3AJTqs4E4_y9-IrBDoOR7tH_9ZaIa3MMc9.%2BaPcznkcmabvtxed2zwzR%2FcfhajG9r%2Brhd22vrJW1Ug"
+//
+    var cookie = require('cookie-signature');
+
+var val = cookie.sign('abc', 'John');
+console.log(val)
+
+const cp=require("cookie-parser");
+let m=cp("abc");
+console.log(m);
